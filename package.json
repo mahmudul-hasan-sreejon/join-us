@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/mahmudul-hasan-sreejon/join-us-web-app/issues"
   },
-  "homepage": "https://github.com/mahmudul-hasan-sreejon/join-us-web-app#readme"
+  "homepage": "https://github.com/mahmudul-hasan-sreejon/join-us-web-app#readme",
+  "dependencies": {
+    "faker": "^4.1.0"
+  }
 }
