@@ -11,4 +11,4 @@ Some of non-standard modules used:
 
 ## Author
 
-Created and maintained by Mahmudul Hasan Sreejon ([@sreejonK19](https://github.com/mahmudul-hasan-sreejon)).
+Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://mahmudul-hasan-sreejon.github.io/)).
