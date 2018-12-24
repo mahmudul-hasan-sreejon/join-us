@@ -25,14 +25,26 @@ app.get("/", function(req, res) {
     });
 });
 
-app.get("/joke", function(req, res) {
-    res.render("home");
+// register page
+app.post("/register", function(req, res) { // inserting a single user in the database
+    res.render("register");
+
+    // let person = {
+    //     email: faker.internet.email(),
+    //     created_at: faker.date.past()
+    // };
+    // connection.query("INSERT INTO users SET ?", person, function(err, results) {
+    //     if(err) throw err;
+    //     console.log(results);
+    // });
 });
+
 
 app.get("/num", function(req, res) {
     let num = Math.floor(Math.random() * 10) + 1;
     res.send("The number is : " + num);
 });
+
 
 // Running node server
 app.listen(8080, function() {
