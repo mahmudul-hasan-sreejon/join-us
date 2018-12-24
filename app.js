@@ -29,16 +29,16 @@ app.get("/", function(req, res) {
 
 // register page
 app.post("/register", function(req, res) { // inserting a single user in the database
-    res.render("register");
+    let person = {
+        email: req.body.email
+    };
+    connection.query("INSERT INTO users SET ?", person, function(err, results) {
+        if(err) throw err;
+        console.log(results);
 
-    // let person = {
-    //     email: faker.internet.email(),
-    //     created_at: faker.date.past()
-    // };
-    // connection.query("INSERT INTO users SET ?", person, function(err, results) {
-    //     if(err) throw err;
-    //     console.log(results);
-    // });
+        res.render("register");
+        // res.redirect("/");
+    });
 });
 
 
