@@ -21,6 +21,6 @@ exports.register = (req, res) => {
         if(err) res.status(500).send({message: err.message || "Some error occurred while inserting new user."});
 
         res.status(200).render("register");
-        // res.redirect("/");
+        // res.status(200).redirect("/");
     });
 }
