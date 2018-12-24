@@ -42,13 +42,7 @@ app.post("/register", function(req, res) { // inserting a single user in the dat
 });
 
 
-app.get("/num", function(req, res) {
-    let num = Math.floor(Math.random() * 10) + 1;
-    res.send("The number is : " + num);
-});
-
-
-// Running node server
-app.listen(8080, function() {
-    console.log("Server running on 8080 port...");
-});
+// Port mapping
+const port = process.env.PORT || 8080;
+// listen for requests
+app.listen(port, () => console.log(`Listening on port ${port}...`));
