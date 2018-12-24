@@ -3,19 +3,18 @@ const express = require("express");
 const mysql = require("mysql");
 const bodyParser = require("body-parser");
 
-const app = express();
+const app = express(); // create express app
 
-app.set("view engine", "ejs"); // setting default view engine to ejs
-app.use(bodyParser.urlencoded({extended: true})); // make body-parser accessible request body elements
+app.set("view engine", "ejs"); // set default view engine to ejs
+app.use(bodyParser.urlencoded({extended: true})); // parse requests of content-type
 app.use(express.static(__dirname + "/public")); // make public directory accessible to views
 
+// Configuring the database
+const dbConfig = require('./config/database.config.js');
+
 // connecting to the database
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "1",
-    database: "join_us_app"
-});
+const connection = mysql.createConnection(dbConfig);
+
 
 // home page
 app.get("/", function(req, res) {
