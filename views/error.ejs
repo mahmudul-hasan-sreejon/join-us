@@ -12,15 +12,15 @@
 <body>
     <div class="flex-container">
         <div class="container">
-            <h1>JOIN US</h1>
-
-            <p class="lead">Enter your email to join <strong><%= count %></strong> others on our waitlist.</p>
-
-            <form method="POST" action="/register">
-                <input type="email" name="email" class="form" placeholder="Enter Your Email">
-                <button>Join Now</button>
-            </form>
+            <h2>ERROR(S) : </h2>
+            <p><%= message %></p>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+setTimeout(() => {
+    window.location = "/";
+}, 8000);
+</script>
