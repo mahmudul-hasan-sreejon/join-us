@@ -1,7 +1,7 @@
 
 const mysql = require("mysql");
 
-// configuring the database
+// getting configuration for the database
 const dbConfig = require('../../config/database.config.js');
 
 // connecting to the database

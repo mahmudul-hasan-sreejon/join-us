@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true})); // parse requests of content-t
 app.use(express.static(__dirname + "/public")); // make public directory accessible to views
 
 
-// require course routes
+// required user routes
 require('./app/routes/user.routes.js')(app);
 
 
