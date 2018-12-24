@@ -5,8 +5,9 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs"); // setting default view engine to ejs
+app.use(bodyParser.urlencoded({extended: true})); // make body-parser accessible request body elements
+app.use(express.static(__dirname + "/public")); // make public directory accessible to views
 
 // connecting to the database
 const connection = mysql.createConnection({
@@ -21,8 +22,8 @@ app.get("/", function(req, res) {
     const sqlString = "SELECT COUNT(*) AS total_users FROM users";
     connection.query(sqlString, function(err, results) {
         if(err) throw err;
+
         const total_users = results[0].total_users;
-        // res.send("We have " + String(total_users) + " users.");
         res.render("home", {count: total_users});
     });
 });
@@ -34,7 +35,6 @@ app.post("/register", function(req, res) { // inserting a single user in the dat
     };
     connection.query("INSERT INTO users SET ?", person, function(err, results) {
         if(err) throw err;
-        console.log(results);
 
         res.render("register");
         // res.redirect("/");
