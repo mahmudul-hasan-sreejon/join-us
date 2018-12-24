@@ -16,5 +16,5 @@ require('./app/routes/user.routes.js')(app);
 // listen for requests
 const port = process.env.PORT || 8080; // Port mapping
 app.listen(port, () => {
-    console.log(`Listening on port ${port}...`)
+    console.log(`Listening on port ${port}...`);
 });
