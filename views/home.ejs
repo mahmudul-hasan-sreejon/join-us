@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HOME PAGE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
 </head>
 <body>
     <h1>JOIN US</h1>
-    <p class="lead">Enter your email to join <strong>USER_COUNT</strong> others on our waitlist.</p>
+    <p class="lead">Enter your email to join <strong><%= count %></strong> others on our waitlist.</p>
     <form method="POST" action="/register">
         <input type="text" class="form" placeholder="Enter Your Email">
         <button>Join Now</button>

@@ -21,7 +21,7 @@ app.get("/", function(req, res) {
         if(err) throw err;
         const total_users = results[0].total_users;
         // res.send("We have " + String(total_users) + " users.");
-        res.render("home");
+        res.render("home", {count: total_users});
     });
 });
 
