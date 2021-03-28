@@ -1,23 +1,22 @@
 {
-  "name": "join-us-web-app",
-  "version": "1.0.0",
-  "description": "A simple mailing list application",
+  "name": "join-us",
+  "version": "1.2.0",
+  "description": "Mail list web app",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mahmudul-hasan-sreejon/join-us-web-app.git"
+    "url": "git+https://github.com/mahmudul-hasan-sreejon/join-us.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mahmudul-hasan-sreejon/join-us-web-app/issues"
+    "url": "https://github.com/mahmudul-hasan-sreejon/join-us/issues"
   },
-  "homepage": "https://github.com/mahmudul-hasan-sreejon/join-us-web-app#readme",
+  "homepage": "https://github.com/mahmudul-hasan-sreejon/join-us#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
