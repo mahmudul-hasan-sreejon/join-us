@@ -1,10 +1,9 @@
-
 module.exports = (app) => {
-    const user = require('../controllers/user.controller.js');
+	const user = require('../controllers/user.controller.js');
 
-    // get the home page
-    app.get("/", user.home);
+	// get the home page
+	app.get('/', user.home);
 
-    // create a new user
-    app.post("/register", user.register);
-}
+	// create a new user
+	app.post('/register', user.register);
+};
