@@ -1,14 +1,20 @@
 # Join Us
-A simple mailing list web application built using `Node.js`, `Express.js` and `mysql`.
 
-## Modules used
+Mailing list web application built using [Express](https://expressjs.com/) and [MySQL](https://www.mysql.com/).
 
-Some of non-standard modules used:
+<p align="center">
+  <img src="https://join-us-mhs.herokuapp.com/?app=notes-mhs&style=flat" alt="Heroku Status" />
+</p>
 
-* [express](https://www.npmjs.com/package/express)
-* [mysql](https://www.npmjs.com/package/mysql)
-* [body-parser](https://www.npmjs.com/package/body-parser)
+![demo](https://raw.githubusercontent.com/mahmudul-hasan-sreejon/join-us/main/static/demo.png)
+
+## Technologies & Tools Used
+
+* [Express](https://expressjs.com/)
+* [MySQL](https://www.mysql.com/)
+* [Node.js](https://nodejs.org/)
+* [ejs](https://www.npmjs.com/package/ejs)
 
 ## Author
 
-Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://mahmudul-hasan-sreejon.github.io/)).
+Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://www.mahmudul-hasan-sreejon.com/)).
