@@ -15,9 +15,14 @@ exports.home = (req, res) => {
 
 // register page
 exports.register = (req, res) => {
-	let person = {
+	const person = {
 		email: req.body.email
 	};
+
+	if (!person.email) {
+		res.status(500).render('error', { message: `Email address can't be blank.` });
+	}
+
 	connection.query('INSERT INTO users SET ?', person, (err) => {
 		if (err) {
 			res
@@ -26,6 +31,5 @@ exports.register = (req, res) => {
 		}
 
 		res.status(200).render('register');
-		// res.status(200).redirect("/");
 	});
 };
