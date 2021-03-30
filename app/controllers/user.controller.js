@@ -21,15 +21,15 @@ exports.register = (req, res) => {
 
 	if (!person.email) {
 		res.status(500).render('error', { message: `Email address can't be blank.` });
+	} else {
+		connection.query('INSERT INTO users SET ?', person, (err) => {
+			if (err) {
+				res
+					.status(500)
+					.render('error', { message: err.message || 'Some error occurred while inserting new user.' });
+			}
+
+			res.status(200).render('register');
+		});
 	}
-
-	connection.query('INSERT INTO users SET ?', person, (err) => {
-		if (err) {
-			res
-				.status(500)
-				.render('error', { message: err.message || 'Some error occurred while inserting new user.' });
-		}
-
-		res.status(200).render('register');
-	});
 };
